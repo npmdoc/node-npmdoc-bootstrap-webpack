@@ -1,0 +1,240 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/gowravshekar/bootstrap-webpack#readme"
+
+    >bootstrap-webpack (v0.0.6)</a>
+</h1>
+<h4>bootstrap3 package for webpack</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bootstrap-webpack">module bootstrap-webpack</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.bootstrap_scripts_loader">
+            function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_scripts_loader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.bootstrap_styles_loader">
+            function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_styles_loader
+            <span class="apidocSignatureSpan">(content)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bootstrap-webpack.bootstrap_scripts_loader">module bootstrap-webpack.bootstrap_scripts_loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.bootstrap_scripts_loader.bootstrap_scripts_loader">
+            function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_scripts_loader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.bootstrap_scripts_loader.pitch">
+            function <span class="apidocSignatureSpan">bootstrap-webpack.bootstrap_scripts_loader.</span>pitch
+            <span class="apidocSignatureSpan">(configPath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bootstrap-webpack.bootstrap_styles_loader">module bootstrap-webpack.bootstrap_styles_loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.bootstrap_styles_loader.bootstrap_styles_loader">
+            function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_styles_loader
+            <span class="apidocSignatureSpan">(content)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bootstrap-webpack" id="apidoc.module.bootstrap-webpack">module bootstrap-webpack</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bootstrap-webpack.bootstrap_scripts_loader" id="apidoc.element.bootstrap-webpack.bootstrap_scripts_loader">
+        function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_scripts_loader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bootstrap_scripts_loader = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bootstrap-webpack.bootstrap_styles_loader" id="apidoc.element.bootstrap-webpack.bootstrap_styles_loader">
+        function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_styles_loader
+        <span class="apidocSignatureSpan">(content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bootstrap_styles_loader = function (content) {
+  this.cacheable(true);
+  var config = this.exec(content, this.resourcePath);
+  var start =
+      &#x22;@import          \&#x22;~bootstrap/less/variables.less\&#x22;;\n&#x22;
+    + &#x22;@icon-font-path: \&#x22;~bootstrap/fonts/\&#x22;;\n&#x22;
+    + &#x22;@import          \&#x22;./bootstrap.config.less\&#x22;;\n&#x22;;
+  source = start + styles.filter(function (style) {
+    return config.styles[style];
+  }).map(function (style) {
+    return &#x22;@import \&#x22;~bootstrap/less/&#x22; + style + &#x22;.less\&#x22;;&#x22;;
+  }).join(&#x22;\n&#x22;);
+  return source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bootstrap-webpack.bootstrap_scripts_loader" id="apidoc.module.bootstrap-webpack.bootstrap_scripts_loader">module bootstrap-webpack.bootstrap_scripts_loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bootstrap-webpack.bootstrap_scripts_loader.bootstrap_scripts_loader" id="apidoc.element.bootstrap-webpack.bootstrap_scripts_loader.bootstrap_scripts_loader">
+        function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_scripts_loader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bootstrap_scripts_loader = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bootstrap-webpack.bootstrap_scripts_loader.pitch" id="apidoc.element.bootstrap-webpack.bootstrap_scripts_loader.pitch">
+        function <span class="apidocSignatureSpan">bootstrap-webpack.bootstrap_scripts_loader.</span>pitch
+        <span class="apidocSignatureSpan">(configPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pitch = function (configPath) {
+  this.cacheable(true);
+  var config = require(configPath);
+  return scripts.filter(function (script) {
+    return config.scripts[script];
+  }).map(function (script) {
+    return &#x22;require(&#x22; + JSON.stringify(&#x22;imports-loader?jQuery=jquery!bootstrap/js/&#x22; + script) + &#x22;);&#x22;;
+  }).join(&#x22;\n&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bootstrap-webpack.bootstrap_styles_loader" id="apidoc.module.bootstrap-webpack.bootstrap_styles_loader">module bootstrap-webpack.bootstrap_styles_loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bootstrap-webpack.bootstrap_styles_loader.bootstrap_styles_loader" id="apidoc.element.bootstrap-webpack.bootstrap_styles_loader.bootstrap_styles_loader">
+        function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_styles_loader
+        <span class="apidocSignatureSpan">(content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bootstrap_styles_loader = function (content) {
+  this.cacheable(true);
+  var config = this.exec(content, this.resourcePath);
+  var start =
+      &#x22;@import          \&#x22;~bootstrap/less/variables.less\&#x22;;\n&#x22;
+    + &#x22;@icon-font-path: \&#x22;~bootstrap/fonts/\&#x22;;\n&#x22;
+    + &#x22;@import          \&#x22;./bootstrap.config.less\&#x22;;\n&#x22;;
+  source = start + styles.filter(function (style) {
+    return config.styles[style];
+  }).map(function (style) {
+    return &#x22;@import \&#x22;~bootstrap/less/&#x22; + style + &#x22;.less\&#x22;;&#x22;;
+  }).join(&#x22;\n&#x22;);
+  return source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
