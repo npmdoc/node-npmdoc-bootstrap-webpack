@@ -1,4 +1,7 @@
-# api documentation for  [bootstrap-webpack (v0.0.6)](https://github.com/gowravshekar/bootstrap-webpack#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-bootstrap-webpack.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-bootstrap-webpack) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-bootstrap-webpack.svg)](https://travis-ci.org/npmdoc/node-npmdoc-bootstrap-webpack)
+# npmdoc-bootstrap-webpack
+
+#### basic api documentation for  [bootstrap-webpack (v0.0.6)](https://github.com/gowravshekar/bootstrap-webpack#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-bootstrap-webpack.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-bootstrap-webpack) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-bootstrap-webpack.svg)](https://travis-ci.org/npmdoc/node-npmdoc-bootstrap-webpack)
+
 #### bootstrap3 package for webpack
 
 [![NPM](https://nodei.co/npm/bootstrap-webpack.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/bootstrap-webpack)
@@ -67,7 +70,8 @@
         "url": "git+https://github.com/gowravshekar/bootstrap-webpack.git"
     },
     "scripts": {},
-    "version": "0.0.6"
+    "version": "0.0.6",
+    "bin": {}
 }
 ```
 
