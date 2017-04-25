@@ -72,9 +72,9 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.bootstrap_styles_loader">
-            function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_styles_loader
-            <span class="apidocSignatureSpan">(content)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.index_loader">
+            function <span class="apidocSignatureSpan">bootstrap-webpack.</span>index_loader
+            <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
@@ -103,13 +103,22 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.bootstrap-webpack.bootstrap_styles_loader">module bootstrap-webpack.bootstrap_styles_loader</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.bootstrap-webpack.index_loader">module bootstrap-webpack.index_loader</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.bootstrap_styles_loader.bootstrap_styles_loader">
-            function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_styles_loader
-            <span class="apidocSignatureSpan">(content)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.index_loader.index_loader">
+            function <span class="apidocSignatureSpan">bootstrap-webpack.</span>index_loader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bootstrap-webpack.index_loader.pitch">
+            function <span class="apidocSignatureSpan">bootstrap-webpack.index_loader.</span>pitch
+            <span class="apidocSignatureSpan">(remainingRequest)</span>
             </a>
 
         </li>
@@ -136,25 +145,13 @@
 
 
     <h2>
-        <a href="#apidoc.element.bootstrap-webpack.bootstrap_styles_loader" id="apidoc.element.bootstrap-webpack.bootstrap_styles_loader">
-        function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_styles_loader
-        <span class="apidocSignatureSpan">(content)</span>
+        <a href="#apidoc.element.bootstrap-webpack.index_loader" id="apidoc.element.bootstrap-webpack.index_loader">
+        function <span class="apidocSignatureSpan">bootstrap-webpack.</span>index_loader
+        <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">bootstrap_styles_loader = function (content) {
-  this.cacheable(true);
-  var config = this.exec(content, this.resourcePath);
-  var start =
-      &#x22;@import          \&#x22;~bootstrap/less/variables.less\&#x22;;\n&#x22;
-    + &#x22;@icon-font-path: \&#x22;~bootstrap/fonts/\&#x22;;\n&#x22;
-    + &#x22;@import          \&#x22;./bootstrap.config.less\&#x22;;\n&#x22;;
-  source = start + styles.filter(function (style) {
-    return config.styles[style];
-  }).map(function (style) {
-    return &#x22;@import \&#x22;~bootstrap/less/&#x22; + style + &#x22;.less\&#x22;;&#x22;;
-  }).join(&#x22;\n&#x22;);
-  return source;
+    <li>description and source-code<pre class="apidocCodePre">index_loader = function () {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -202,29 +199,55 @@
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.bootstrap-webpack.bootstrap_styles_loader" id="apidoc.module.bootstrap-webpack.bootstrap_styles_loader">module bootstrap-webpack.bootstrap_styles_loader</a></h1>
+<h1><a href="#apidoc.module.bootstrap-webpack.index_loader" id="apidoc.module.bootstrap-webpack.index_loader">module bootstrap-webpack.index_loader</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.bootstrap-webpack.bootstrap_styles_loader.bootstrap_styles_loader" id="apidoc.element.bootstrap-webpack.bootstrap_styles_loader.bootstrap_styles_loader">
-        function <span class="apidocSignatureSpan">bootstrap-webpack.</span>bootstrap_styles_loader
-        <span class="apidocSignatureSpan">(content)</span>
+        <a href="#apidoc.element.bootstrap-webpack.index_loader.index_loader" id="apidoc.element.bootstrap-webpack.index_loader.index_loader">
+        function <span class="apidocSignatureSpan">bootstrap-webpack.</span>index_loader
+        <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">bootstrap_styles_loader = function (content) {
+    <li>description and source-code<pre class="apidocCodePre">index_loader = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bootstrap-webpack.index_loader.pitch" id="apidoc.element.bootstrap-webpack.index_loader.pitch">
+        function <span class="apidocSignatureSpan">bootstrap-webpack.index_loader.</span>pitch
+        <span class="apidocSignatureSpan">(remainingRequest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pitch = function (remainingRequest) {
+
+  // Webpack 1.7.3 uses this.resourcePath. Leaving in remaining request for possibly older versions
+  // of Webpack
+  var configFilePath = this.resourcePath || remainingRequest;
   this.cacheable(true);
-  var config = this.exec(content, this.resourcePath);
-  var start =
-      &#x22;@import          \&#x22;~bootstrap/less/variables.less\&#x22;;\n&#x22;
-    + &#x22;@icon-font-path: \&#x22;~bootstrap/fonts/\&#x22;;\n&#x22;
-    + &#x22;@import          \&#x22;./bootstrap.config.less\&#x22;;\n&#x22;;
-  source = start + styles.filter(function (style) {
-    return config.styles[style];
-  }).map(function (style) {
-    return &#x22;@import \&#x22;~bootstrap/less/&#x22; + style + &#x22;.less\&#x22;;&#x22;;
-  }).join(&#x22;\n&#x22;);
-  return source;
+
+  if (!configFilePath || configFilePath.trim() === &#x27;&#x27;) {
+    var msg = &#x27;You specified the bootstrap-webpack with no configuration file. Please specify&#x27; +
+      &#x27; the configuration file, like: \&#x27;bootstrap-webpack!./bootstrap.config.js\&#x27; or use&#x27; +
+      &#x27; require(\&#x27;bootstrap-webpack\&#x27;).&#x27;;
+    console.error(&#x27;ERROR: &#x27; + msg);
+    throw new Error(msg);
+  }
+
+  var config = require(configFilePath);
+  var styleLoader = config.styleLoader || &#x27;style-loader!css-loader!less-loader&#x27;;
+
+  var styleLoaderCommand = &#x27;require(&#x27; + JSON.stringify(&#x27;-!&#x27; + styleLoader + &#x27;!&#x27; +
+      require.resolve(&#x27;./bootstrap-styles.loader.js&#x27;) + &#x27;!&#x27; + configFilePath) + &#x27;);&#x27;;
+  var jsLoaderCommand = &#x27;require(&#x27; + JSON.stringify(&#x27;-!&#x27; +
+      require.resolve(&#x27;./bootstrap-scripts.loader.js&#x27;) + &#x27;!&#x27; + configFilePath) + &#x27;);&#x27;;
+  var result = [styleLoaderCommand, jsLoaderCommand].join(&#x27;\n&#x27;);
+  return result;
+
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
